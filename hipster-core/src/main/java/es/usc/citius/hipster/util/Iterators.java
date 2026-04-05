@@ -6,6 +6,8 @@ import java.util.NoSuchElementException;
 
 public final class Iterators {
 
+    private Iterators() {}
+
     public static abstract class AbstractIterator<E> implements Iterator<E> {
         protected E current;
 
