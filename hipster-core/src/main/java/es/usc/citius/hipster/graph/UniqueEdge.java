@@ -58,10 +58,8 @@ public class UniqueEdge<V> {
 
         UniqueEdge that = (UniqueEdge) o;
 
-        if (!edgeId.equals(that.edgeId)) return false;
-        if (value != null ? !value.equals(that.value) : that.value != null) return false;
-
-        return true;
+        return edgeId.equals(that.edgeId) &&
+                (value != null ? value.equals(that.value) : that.value == null);
     }
 
     @Override
