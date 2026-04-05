@@ -48,9 +48,6 @@ public class BinaryOperation<E extends Comparable<E>> implements BinaryFunction<
         assert operation.apply(identityElem, maxElem).compareTo(maxElem) == 0;
         assert operation.apply(maxElem, identityElem).compareTo(maxElem) == 0;
         assert operation.apply(identityElem, identityElem).compareTo(identityElem) == 0;
-        //Preconditions.checkArgument(operation.apply(identityElem, maxElem).equals(maxElem), "Property error: I x A != A");
-        //Preconditions.checkArgument(operation.apply(maxElem, identityElem).equals(maxElem), "Property error: A x I != A");
-        //Preconditions.checkArgument(operation.apply(identityElem, identityElem).equals(identityElem), "Property error: I x I != I");
 		this.maxElem = maxElem;
 		this.identityElem = identityElem;
 		this.op = operation;
